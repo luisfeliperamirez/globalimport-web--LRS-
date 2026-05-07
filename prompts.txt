@@ -25,3 +25,23 @@ Footer
 • Nombre de la empresa y año de copyright.
 • Links a redes sociales (pueden ser placeholders, no hace falta que funcionen).
 • Email y teléfono de contacto ficticios.
+-------------------------------------------------------------
+Sección de Servicios (mínimo 4 servicios) Debe mostrar las categorías de productos o 
+servicios que ofrece GlobalImport S.A. Ejemplos sugeridos:
+• Importación de Electrónica
+• Importación de Indumentaria y Accesorios
+• Importación de Artículos del Hogar
+• Logística y Distribución
+Cada servicio debe mostrarse como una tarjeta (card) que contenga:
+a) Un icono o imagen representativa (cada imagen de la carpeta tiene como nombre el servicio que ofrece).
+b) Título del servicio.
+c) Descripción breve (2-3 oraciones).
+d) Las tarjetas deben estar distribuidas en una grilla (grid o flexbox, mínimo 2 columnas en 
+desktop).
+
+Requisitos de Estilo (style.css)
+• Paleta de colores coherente: mínimo 2-3 colores definidos (se recomienda usar variables CSS --var).
+• Tipografías: al menos 2 (puede usarse Google Fonts).
+• Las cards de servicios deben tener sombra (box-shadow) y efecto hover.
+• El hero debe ocupar el 100% del ancho de la pantalla.
+• Uso obligatorio de Flexbox o CSS Grid para el layout de las cards.
