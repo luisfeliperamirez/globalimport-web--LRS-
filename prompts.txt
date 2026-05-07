@@ -1,0 +1,27 @@
+crea una página para el siguiente contexto de una empresa: La empresa "GlobalImport S.A." se dedica a la importación y distribución de productos 
+electrónicos, indumentaria y artículos del hogar. El sitio web debe transmitir confianza, 
+profesionalismo y facilitar el contacto con potenciales clientes.
+
+crea la estructura inicial del sitio y sección hero con lo siguientes requisitos:
+Barra de Navegación (navbar)
+• Logo o nombre de la empresa a la izquierda.
+• Links de navegación: Inicio, Servicios, Contacto y Registro.
+• El link "Registro" debe apuntar a la página del formulario (registro.html), que se creará en la 
+Etapa 2.
+• La navegación debe ser responsive: en pantallas pequeñas puede simplificarse (no se exige hamburger menu, pero suma)
+
+Sección Hero (encabezado principal)
+• Imagen de fondo o banner llamativo relacionado con importación/comercio (usa la de la carpeta images).
+• Título principal (h1) con el nombre de la empresa.
+• Subtítulo o slogan de la empresa.
+• Botón de llamada a la acción (CTA) que lleve a la sección de servicios o al formulario de 
+registro.
+
+Sección "¿Por qué elegirnos?"
+• Mínimo 3 puntos destacados (confianza, experiencia, variedad de productos, etc.).
+• Puede ser una sección simple con íconos y texto o una lista estilizada.
+
+Footer
+• Nombre de la empresa y año de copyright.
+• Links a redes sociales (pueden ser placeholders, no hace falta que funcionen).
+• Email y teléfono de contacto ficticios.
