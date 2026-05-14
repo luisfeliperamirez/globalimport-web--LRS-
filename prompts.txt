@@ -105,3 +105,65 @@ Nota sobre Accesibilidad
 Todos los campos deben tener su correspondiente etiqueta <label> asociada correctamente 
 usando el atributo for / id. Los campos requeridos deben marcarse visualmente (por ejemplo, con 
 un asterisco *).
+-------------------------------------------------------------
+Validación del Formulario con JavaScript
+(Archivos nuevos validaciones.js (vinculado a registro.html)
+), Restricción 
+importante
+No se permite usar librerías externas de validación (jQuery Validate, etc.). 
+Solo JavaScript vanilla.
+
+Agregar un archivo validaciones.js que intercepte el envío del formulario y aplique validaciones del 
+lado del cliente antes de permitir que el formulario se procese. El usuario debe recibir 
+retroalimentación visual clara e inmediata ante cualquier error.
+
+Validaciones de Datos Personales
+Nombre completo Solo letras y espacios. Mínimo 3 caracteres, máximo 60. No puede 
+quedar vacío
+
+Fecha de nacimiento El usuario debe ser mayor de 18 años al momento del registro.
+Rut Solo números. Entre 7 y 8 dígitos. Debe validar como rut chileno.
+Género y Nacionalidad Deben tener una opción seleccionada distinta al placeholder.
+
+Email Formato válido: debe contener @ y dominio. Usar expresión regular.
+Confirmar email Debe coincidir exactamente con el campo email.
+Contraseña Mínimo 8 caracteres. Debe contener al menos: 1 mayúscula, 1 
+número y 1 carácter especial (!@#$%^&*).
+Confirmar contraseña Debe coincidir exactamente con la contraseña.
+Teléfono Solo dígitos y puede incluir +, -, espacios. Mínimo 8 dígitos 
+numéricos
+
+País y Provincia No pueden estar vacíos.
+Ciudad Solo letras y espacios, mínimo 2 caracteres.
+Calle y número No puede estar vacío. Mínimo 5 caracteres.
+Código postal Solo alfanumérico, entre 4 y 10 caracteres.
+Textarea (referencia) Si se completa, no puede superar los 200 caracteres (mostrar 
+contador en tiempo real).
+
+Validaciones de Preferencias y Términos
+• Al menos una categoría de interés debe estar seleccionada (checkboxes).
+• El tipo de cliente debe estar seleccionado (radio buttons).
+• Los dos checkboxes de Términos y Condiciones y Política de Privacidad son obligatorios.
+
+Comportamiento de la Interfaz
+Retroalimentación Visual (feedback)
+• Al detectar un error en un campo: agregar la clase CSS "campo-error" que muestre el borde 
+en rojo.
+• Debajo de cada campo con error mostrar un mensaje descriptivo (ej.: "El email no tiene un 
+formato válido").
+• Al corregir el error (evento input o change): remover la clase "campo-error" y ocultar el 
+mensaje.
+• Los campos válidos pueden recibir la clase "campo-ok" (borde verde) como confirmación 
+positiva.
+Validación en Tiempo Real vs. Al Enviar
+• La validación principal se activa al hacer clic en "Registrarme" (evento submit con 
+preventDefault).
+• Como mejora (opcional pero recomendada): validar individualmente cada campo al salir del 
+mismo (evento blur).
+• El contador de caracteres del textarea debe actualizarse en tiempo real (evento input).
+Mensaje de Éxito
+Si el formulario pasa todas las validaciones correctamente, en lugar de enviar los datos (no hay 
+backend), se debe:
+• Ocultar el formulario.
+• Mostrar un mensaje de éxito estilizado con el nombre del usuario registrado.
+• Ofrecer un botón que vuelva al inicio (index.html).
