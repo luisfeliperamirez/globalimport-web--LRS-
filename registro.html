@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Usuario - GlobalImport S.A.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">GlobalImport S.A.</a>
+      <ul class="nav-links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="registro.html">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="registration-section">
+      <div class="container">
+        <div class="registration-header">
+          <h1>Crear tu cuenta en GlobalImport</h1>
+          <p>Completa el formulario para comenzar a operar con nosotros</p>
+        </div>
+
+        <form class="registration-form" id="registrationForm">
+          <!-- SECCIÓN A: DATOS PERSONALES -->
+          <fieldset class="form-section">
+            <legend class="section-title">Datos Personales</legend>
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="fullName">Nombre completo <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  placeholder="Tu nombre completo"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="birthDate">Fecha de nacimiento <span class="required">*</span></label>
+                <input 
+                  type="date" 
+                  id="birthDate" 
+                  name="birthDate" 
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="rut">Rut / Número de documento <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="rut" 
+                  name="rut" 
+                  placeholder="XX.XXX.XXX-X"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Género <span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="nobinario">No binario</option>
+                  <option value="prefiero_no_decir">Prefiero no decir</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="nationality">Nacionalidad <span class="required">*</span></label>
+                <select id="nationality" name="nationality" required>
+                  <option value="">Selecciona un país</option>
+                  <option value="argentina">Argentina</option>
+                  <option value="brasil">Brasil</option>
+                  <option value="chile">Chile</option>
+                  <option value="colombia">Colombia</option>
+                  <option value="mexico">México</option>
+                  <option value="peru">Perú</option>
+                  <option value="españa">España</option>
+                  <option value="uruguay">Uruguay</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- SECCIÓN B: DATOS DE CONTACTO Y ACCESO -->
+          <fieldset class="form-section">
+            <legend class="section-title">Datos de Contacto y Acceso</legend>
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label for="email">Correo electrónico <span class="required">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="tu@correo.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="confirmEmail">Confirmar correo electrónico <span class="required">*</span></label>
+                <input 
+                  type="email" 
+                  id="confirmEmail" 
+                  name="confirmEmail" 
+                  placeholder="confirma tu correo"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Contraseña <span class="required">*</span></label>
+                <div class="password-container">
+                  <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Mínimo 8 caracteres"
+                    required
+                  />
+                  <div class="password-strength">
+                    <div class="strength-bar" id="strengthBar"></div>
+                    <span class="strength-text" id="strengthText"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="confirmPassword">Confirmar contraseña <span class="required">*</span></label>
+                <input 
+                  type="password" 
+                  id="confirmPassword" 
+                  name="confirmPassword" 
+                  placeholder="Confirma tu contraseña"
+                  required
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="phone">Teléfono <span class="required">*</span></label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="+54 9 11 xxxx xxxx"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- SECCIÓN C: DIRECCIÓN DE ENTREGA -->
+          <fieldset class="form-section">
+            <legend class="section-title">Dirección de Entrega</legend>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="deliveryCountry">País <span class="required">*</span></label>
+                <select id="deliveryCountry" name="deliveryCountry" required>
+                  <option value="">Selecciona un país</option>
+                  <option value="argentina">Argentina</option>
+                  <option value="brasil">Brasil</option>
+                  <option value="chile">Chile</option>
+                  <option value="colombia">Colombia</option>
+                  <option value="mexico">México</option>
+                  <option value="peru">Perú</option>
+                  <option value="españa">España</option>
+                  <option value="uruguay">Uruguay</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="state">Provincia / Estado <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="state" 
+                  name="state" 
+                  placeholder="Ej: Buenos Aires"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="city">Ciudad <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="city" 
+                  name="city" 
+                  placeholder="Ej: Ciudad de Buenos Aires"
+                  required
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="street">Calle y número <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="street" 
+                  name="street" 
+                  placeholder="Ej: Calle Principal 123"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="postalCode">Código postal <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="postalCode" 
+                  name="postalCode" 
+                  placeholder="Ej: 1425"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="apartment">Piso y departamento</label>
+                <input 
+                  type="text" 
+                  id="apartment" 
+                  name="apartment" 
+                  placeholder="Ej: Piso 3, Depto B"
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="instructions">Referencia o instrucciones adicionales <span class="char-count">(máx. 200 caracteres)</span></label>
+                <textarea 
+                  id="instructions" 
+                  name="instructions" 
+                  placeholder="Ej: Portón rojo, timbre en la puerta principal"
+                  maxlength="200"
+                  rows="3"
+                ></textarea>
+                <span class="char-counter"><span id="charCount">0</span>/200</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- SECCIÓN D: PREFERENCIAS Y TÉRMINOS -->
+          <fieldset class="form-section">
+            <legend class="section-title">Preferencias y Términos</legend>
+            <div class="form-subsection">
+              <h3 class="subsection-title">Categorías de interés</h3>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input 
+                    type="checkbox" 
+                    id="category-electronics" 
+                    name="categories" 
+                    value="electronics"
+                  />
+                  <label for="category-electronics">Electrónica</label>
+                </div>
+                <div class="checkbox-item">
+                  <input 
+                    type="checkbox" 
+                    id="category-clothing" 
+                    name="categories" 
+                    value="clothing"
+                  />
+                  <label for="category-clothing">Indumentaria</label>
+                </div>
+                <div class="checkbox-item">
+                  <input 
+                    type="checkbox" 
+                    id="category-home" 
+                    name="categories" 
+                    value="home"
+                  />
+                  <label for="category-home">Hogar</label>
+                </div>
+                <div class="checkbox-item">
+                  <input 
+                    type="checkbox" 
+                    id="category-other" 
+                    name="categories" 
+                    value="other"
+                  />
+                  <label for="category-other">Otros</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-subsection">
+              <h3 class="subsection-title">Tipo de cliente</h3>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input 
+                    type="radio" 
+                    id="client-consumer" 
+                    name="clientType" 
+                    value="consumer"
+                    checked
+                  />
+                  <label for="client-consumer">Consumidor final</label>
+                </div>
+                <div class="radio-item">
+                  <input 
+                    type="radio" 
+                    id="client-reseller" 
+                    name="clientType" 
+                    value="reseller"
+                  />
+                  <label for="client-reseller">Revendedor</label>
+                </div>
+                <div class="radio-item">
+                  <input 
+                    type="radio" 
+                    id="client-business" 
+                    name="clientType" 
+                    value="business"
+                  />
+                  <label for="client-business">Empresa</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-subsection">
+              <h3 class="subsection-title">¿Cómo nos conociste?</h3>
+              <select id="howDidYouKnowUs" name="howDidYouKnowUs">
+                <option value="">Selecciona una opción</option>
+                <option value="social_media">Redes sociales</option>
+                <option value="recommendation">Recomendación</option>
+                <option value="web_search">Búsqueda web</option>
+                <option value="advertising">Publicidad</option>
+                <option value="other">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-subsection">
+              <div class="checkbox-item">
+                <input 
+                  type="checkbox" 
+                  id="newsletter" 
+                  name="newsletter" 
+                  value="yes"
+                />
+                <label for="newsletter">Suscribirse al newsletter para recibir ofertas y novedades</label>
+              </div>
+            </div>
+
+            <div class="form-subsection">
+              <div class="checkbox-item terms">
+                <input 
+                  type="checkbox" 
+                  id="termsConditions" 
+                  name="termsConditions" 
+                  value="yes"
+                  required
+                />
+                <label for="termsConditions">
+                  Acepto los <a href="#" target="_blank" class="link-terms">Términos y Condiciones</a> <span class="required">*</span>
+                </label>
+              </div>
+              <div class="checkbox-item terms">
+                <input 
+                  type="checkbox" 
+                  id="privacyPolicy" 
+                  name="privacyPolicy" 
+                  value="yes"
+                  required
+                />
+                <label for="privacyPolicy">
+                  Acepto la <a href="#" target="_blank" class="link-terms">Política de Privacidad</a> <span class="required">*</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BOTONES DE ACCIÓN -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">Registrarme</button>
+            <button type="reset" class="btn btn-secondary btn-large">Limpiar formulario</button>
+          </div>
+
+          <div class="form-footer">
+            <p>¿Ya tienes cuenta? <a href="#" class="link-login">Inicia sesión aquí</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© GlobalImport S.A. 2026</p>
+      <div class="footer-links">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <p class="footer-contact">Email: contacto@globalimport.com | Tel: +54 11 2233 4455</p>
+    </div>
+  </footer>
+
+  <script src="form.js"></script>
+</body>
+</html>

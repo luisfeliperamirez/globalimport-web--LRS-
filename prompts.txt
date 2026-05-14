@@ -45,3 +45,63 @@ Requisitos de Estilo (style.css)
 • Las cards de servicios deben tener sombra (box-shadow) y efecto hover.
 • El hero debe ocupar el 100% del ancho de la pantalla.
 • Uso obligatorio de Flexbox o CSS Grid para el layout de las cards.
+-------------------------------------------------------------
+ Formulario de Registro de Usuario
+
+ Crear una página de registro (registro.html) a la que se accede desde el link "Registro" de la 
+navbar. El formulario debe ser visualmente atractivo, estar correctamente estructurado 
+semánticamente y recopilar información detallada del usuario que desea operar con GlobalImport 
+S.A.
+
+El formulario debe estar dividido en al menos cuatro secciones claramente separadas visualmente 
+(con títulos de sección, separadores o distintos fondos):
+Sección A — Datos Personales
+• Nombre completo (input text, requerido)
+• Fecha de nacimiento (input date, requerido)
+• Rut / Número de documento (input number o text, requerido)
+• Género (select con opciones: Masculino, Femenino, No binario, Prefiero no decir)
+• Nacionalidad (select con al menos 8 países listados)
+Sección B — Datos de Contacto y Acceso
+• Correo electrónico (input email, requerido)
+• Confirmar correo electrónico (input email, requerido)
+• Contraseña (input password, requerido, con indicador visual de fuerza — puede ser solo 
+visual en esta etapa)
+• Confirmar contraseña (input password, requerido)
+• Teléfono (input tel, requerido, con placeholder que indique el formato esperado)
+Sección C — Dirección de Entrega
+• País (select, requerido)
+• Provincia / Estado (input text, requerido)
+• Ciudad (input text, requerido)
+• Calle y número (input text, requerido)
+• Código postal (input text, requerido)
+• Piso y departamento (input text, opcional)
+• Referencia o instrucciones adicionales (textarea, máximo 200 caracteres, opcional)
+Sección D — Preferencias y Términos
+• Categorías de interés (checkboxes múltiples: Electrónica, Indumentaria, Hogar, Otros)
+• Tipo de cliente (radio buttons: Consumidor final, Revendedor, Empresa)
+• ¿Cómo nos conociste? (select: Redes sociales, Recomendación, Búsqueda web, 
+Publicidad, Otro)
+• Suscripción al newsletter (checkbox individual)
+• Aceptación de Términos y Condiciones (checkbox obligatorio, con link a una página ficticia 
+o modal)
+• Aceptación de la Política de Privacidad (checkbox obligatorio)
+Botones de Acción
+• Botón "Registrarme" (submit) — centrado, con estilo destacado.
+• Botón "Limpiar formulario" (reset) — con estilo secundario.
+• Link "Ya tengo cuenta, iniciar sesión" (ficticio).
+
+Requisitos de Estilo — Formulario
+• Los campos deben verse distintos en estado :focus (borde de color, sombra suave).
+• Los campos con error (a preparar para la Etapa 3) deben tener una clase CSS lista para 
+aplicar borde rojo.
+• El formulario debe estar centrado en la página con un ancho máximo de 700-800px.
+• Las secciones del formulario deben estar visualmente diferenciadas (fondo, borde o título 
+de sección).
+• El diseño debe ser responsive: en mobile los campos ocupan el 100% del ancho.
+• Uso de CSS Grid o Flexbox para alinear campos en dos columnas en desktop (al menos en 
+algunas secciones).
+
+Nota sobre Accesibilidad
+Todos los campos deben tener su correspondiente etiqueta <label> asociada correctamente 
+usando el atributo for / id. Los campos requeridos deben marcarse visualmente (por ejemplo, con 
+un asterisco *).
